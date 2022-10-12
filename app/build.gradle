@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'maven-publish'
 
@@ -7,7 +7,6 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "gr.payzy"
         minSdk 21
         targetSdk 33
         versionCode 1
@@ -33,8 +32,8 @@ android {
     publishing {
         publications {
             maven(MavenPublication) {
-                groupId = 'gr.TestSmack'
-                artifactId = 'TestSmack'
+                groupId = 'gr.pzSmack'
+                artifactId = 'pzSmack'
                 version = "0.1.1"
                 pom {
                     description = 'A description of my library'
@@ -48,7 +47,7 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'com.google.android.material:material:1.6.1'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
